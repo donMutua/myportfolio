@@ -6,11 +6,11 @@ function HeroSection() {
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black w-1/2"></div>
-      <div className="absolute inset-y-0 right-0 w-1/2">
+      <div className=" hidden absolute inset-y-0 right-0 w-1/2 md:block">
         <Image src={hero} alt="Hero image" fill />
       </div>
 
-      <nav className="absolute inset-0 text-white p-5 md:p-20  flex flex-col  justify-center z-20 ">
+      <nav className="absolute inset-0 text-center text-white p-5 md:p-20  md:flex flex-col md:text-left  justify-center z-20 ">
         <h1 className="text-3xl font-bold mb-6 opacity-90 md:text-7xl">
           React Frontend <br /> Developer
         </h1>
@@ -23,12 +23,11 @@ function HeroSection() {
             DOWNLOAD CV
           </button>
         </div>
-        <div className="flex items-center justify-between mt-8">
-          <div className="flex gap-5 mb">
-            <p className="underline text-xs md:text-base">LinkedIn</p>{" "}
-            <span className="text-xs md:text-base">/</span>{" "}
-            <p className="underline text-xs md:text-base">Github</p>
-          </div>
+
+        <div className="flex justify-center gap-5 mt-4 md:justify-start">
+          <p className="underline text-xs md:text-base">LinkedIn</p>{" "}
+          <span className="text-xs md:text-base">/</span>{" "}
+          <p className="underline text-xs md:text-base">Github</p>
         </div>
       </nav>
     </div>
