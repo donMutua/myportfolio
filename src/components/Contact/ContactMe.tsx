@@ -5,7 +5,7 @@ import cuteBoy from "../../../public/images/cuteboy.png";
 function ContactMe() {
   const currentYear = new Date().getFullYear();
   return (
-    <section className=" text-white pt-5">
+    <section id="contact" className=" text-white pt-5">
       <div className="p-5 md:w-2/4 md:p-0 t m-auto">
         <h1 className="font-semibold text-2xl mb-2 text-center">
           Let's Create Something Great Together! - Hire Me
@@ -25,7 +25,7 @@ function ContactMe() {
       </div>
       <footer className="bg-gray-800 text-white py-4">
         <div className="container mx-auto text-center">
-          <p>&copy; {currentYear} My Website. All rights reserved.</p>
+          <p>&copy; {currentYear} DM. All rights reserved.</p>
         </div>
       </footer>
     </section>

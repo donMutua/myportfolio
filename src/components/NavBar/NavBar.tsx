@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex md:flex-row text-gray-400 uppercase justify-between md:items-center p-6 ml-8 mr-8">
+    <nav className="flex md:flex-row text-gray-400 uppercase justify-between md:items-center p-6 ml-8 mr-8 ">
       <h2 className="text-4xl mb-7">DM</h2>
 
       {/* Mobile menu, show/hide based on menu state */}

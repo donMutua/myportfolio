@@ -2,8 +2,15 @@ import React from "react";
 import Image from "next/image";
 
 import stockds from "../../../public/images/stock.png";
+import { API_URL } from "@/lib/api";
 
 function CardComponent() {
+  // const { about, thumbnail, url, githubUrl } = project;
+
+  // const image = thumbnail.data.attributes.url.toString();
+
+  // const thumbnailUrl = `${API_URL}${image}`;
+
   return (
     <div className="flex flex-col justify-around mb-12 md:flex-row">
       <Image
