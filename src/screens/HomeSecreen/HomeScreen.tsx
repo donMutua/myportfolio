@@ -1,4 +1,5 @@
 import AboutSection from "@/components/About/AboutSection";
+import ContactMe from "@/components/Contact/ContactMe";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import NavBar from "@/components/NavBar/NavBar";
 import ProjectSection from "@/components/Projects/ProjectSection";
@@ -13,6 +14,7 @@ function HomeScreen() {
       <AboutSection />
       <SkillsSection />
       <ProjectSection />
+      <ContactMe />
     </div>
   );
 }
