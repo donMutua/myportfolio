@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import NavBar from "@/components/NavBar/NavBar";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import SkillsSection from "@/components/Skills/SkillsSection";
-import { getPortfolio } from "@/lib/api";
+import { getPortfolio, Portfolio } from "@/lib/api";
 import React, { useEffect, useState } from "react";
 
 function HomeScreen() {
