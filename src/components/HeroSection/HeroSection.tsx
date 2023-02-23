@@ -1,6 +1,5 @@
 import Image from "next/image";
 import hero from "../../../public/images/hero3.png";
-import Navbar from "../NavBar/NavBar";
 
 function HeroSection() {
   return (
@@ -11,12 +10,13 @@ function HeroSection() {
       </div>
 
       <nav className="absolute inset-0 text-center text-white p-5 md:p-20  md:flex flex-col md:text-left  justify-center z-20 ">
-        <h1 className="text-3xl font-bold mb-6 opacity-90 md:text-7xl">
-          React Frontend <br /> Developer
+        <h1 className=" font-semibold mb-2 opacity-90 md:text-7xl">
+          Donald <br /> Mutua
         </h1>
-        <p className="text-sm font-light opacity-80 mb-6 pr-6 md:text-base">
-          Hi, I'm Don Mutua, A passionate Frontend developer based in Nairobi,
-          Kenya
+
+        {/* <h3 className="text-2xl font-semibold mb-6">Front Developer</h3> */}
+        <p className="text-sm font-regular opacity-80 mb-6 pr-6 md:text-base">
+          Front Developer | UI/UX Designer | Full Stack Developer
         </p>
         <div>
           <button className="bg-white text-black p-3 hover:bg-slate-200 md:p-5">

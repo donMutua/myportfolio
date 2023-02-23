@@ -6,7 +6,21 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+    },
+    extend: {
+      fontSize: {
+        "2xl": "1.5rem",
+      },
+
+      fontWeight: {
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+      },
+    },
   },
   plugins: [],
 };
