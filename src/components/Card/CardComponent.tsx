@@ -2,9 +2,13 @@ import React from "react";
 import Image from "next/image";
 
 import stockds from "../../../public/images/stock.png";
-import { API_URL } from "@/lib/api";
+import { API_URL, Project } from "@/lib/api";
 
-function CardComponent() {
+type CardComponentProps = {
+  project: Project;
+};
+
+function CardComponent({ project }: CardComponentProps) {
   // const { about, thumbnail, url, githubUrl } = project;
 
   // const image = thumbnail.data.attributes.url.toString();

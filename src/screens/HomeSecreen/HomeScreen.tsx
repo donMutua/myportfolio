@@ -1,33 +1,23 @@
+import React, { useContext } from "react";
+
 import AboutSection from "@/components/About/AboutSection";
 import ContactMe from "@/components/Contact/ContactMe";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import NavBar from "@/components/NavBar/NavBar";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import SkillsSection from "@/components/Skills/SkillsSection";
-import { getPortfolio, Portfolio } from "@/lib/api";
-import React, { useEffect, useState } from "react";
+
+import { PortfolioContext } from "@/store/PortfolioContext";
 
 function HomeScreen() {
-  const [portfolio, setPortfolio] = useState<Portfolio | null>(null);
+  const { portfolio, isLoading } = useContext(PortfolioContext);
 
-  const fetchData = async () => {
-    try {
-      const data = await getPortfolio();
-      setPortfolio(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  if (isLoading) return <div>Loading...</div>;
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const portfolioData = portfolio?.[0]?.attributes;
 
-  if (!portfolio) return <div>Loading...</div>;
+  const { about, skills, projects } = portfolioData || {};
 
-  const { attributes: portfolioData } = portfolio[0];
-
-  const { about, skills, projects } = portfolioData;
   return (
     <div className="bg-black">
       <NavBar />

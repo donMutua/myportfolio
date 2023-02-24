@@ -8,16 +8,16 @@ export interface PortfolioItem {
   };
 }
 
-interface Project {
+export interface Project {
   id: number;
   about: string;
   url: string;
   githubUrl: string;
   stacktags?: Array<string>;
-  //   thumbnail: Thumbnail;
+  thumbnail: Thumbnail;
 }
 
-interface Skill {
+export interface Skill {
   id: number;
   language: string;
   skill: number;
