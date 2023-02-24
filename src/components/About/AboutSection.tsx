@@ -1,4 +1,4 @@
-function AboutSection({ about }) {
+function AboutSection({ about }: { about: string }) {
   return (
     <section id="about" className=" p-5 w-full bg-slate-300">
       <div className=" w-full p-5 md:w-2/4 md:p-0 t m-auto">
