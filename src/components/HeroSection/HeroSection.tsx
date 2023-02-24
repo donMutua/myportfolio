@@ -2,6 +2,8 @@ import Image from "next/image";
 import hero from "../../../public/images/hero3.png";
 
 function HeroSection() {
+  const cvUrl =
+    "https://drive.google.com/file/d/1o8fickLZp6anwlFsmh2g0e_QvHu9hnak/view?usp=share_link";
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black w-1/2"></div>
@@ -19,7 +21,10 @@ function HeroSection() {
           Front Developer | UI/UX Designer | Full Stack Developer
         </p>
         <div>
-          <button className="bg-white text-black p-3 hover:bg-slate-200 md:p-5">
+          <button
+            className="bg-white text-black p-3 hover:bg-slate-200 md:p-5"
+            onClick={() => window.open(cvUrl, "_blank")}
+          >
             DOWNLOAD CV
           </button>
         </div>
