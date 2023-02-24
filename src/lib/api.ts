@@ -15,6 +15,7 @@ export interface Project {
   githubUrl: string;
   stacktags?: Array<string>;
   thumbnail: Thumbnail;
+  name: string;
 }
 
 export interface Skill {
