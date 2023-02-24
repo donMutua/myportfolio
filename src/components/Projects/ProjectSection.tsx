@@ -8,7 +8,7 @@ function ProjectSection({ projects = [] }: { projects?: Project[] }) {
         <h1 className="font-semibold text-2xl mb-6 text-center">Projects</h1>
 
         {projects?.map((project) => (
-          <CardComponent project={project} />
+          <CardComponent key={project.id} project={project} />
         ))}
       </div>
     </section>

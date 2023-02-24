@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black w-1/2"></div>
-      <div className=" hidden absolute inset-y-0 right-0 w-1/2 md:block">
+      <div className="hidden absolute inset-y-0 right-0 w-1/2 md:block">
         <Image src={hero} alt="Hero image" fill />
       </div>
 
