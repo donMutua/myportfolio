@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    disableStaticImages: true,
     domains: ["localhost", "https://rocky-hamlet-41943.herokuapp.com"],
   },
 };
