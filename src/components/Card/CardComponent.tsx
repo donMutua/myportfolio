@@ -22,7 +22,7 @@ function CardComponent({ project }: CardComponentProps) {
         width={400}
         height={400}
         alt="stock"
-        className="rounded-lg"
+        className="rounded-lg mb-3"
         style={{ objectFit: "cover" }}
       />
 

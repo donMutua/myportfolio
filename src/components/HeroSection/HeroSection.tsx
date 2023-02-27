@@ -3,18 +3,18 @@ import hero from "../../../public/images/hero3.png";
 
 const linkedInUrl = "https://www.linkedin.com/in/idrawdesigns/";
 const githubUrl = "https://github.com/donMutua";
+const cvUrl =
+  "https://drive.google.com/file/d/1o8fickLZp6anwlFsmh2g0e_QvHu9hnak/view?usp=share_link";
 
 function HeroSection() {
-  const cvUrl =
-    "https://drive.google.com/file/d/1o8fickLZp6anwlFsmh2g0e_QvHu9hnak/view?usp=share_link";
   return (
-    <div className="relative h-screen">
-      <div className="absolute inset-0 bg-black w-1/2"></div>
+    <div className="  md:relative md:h-screen">
+      <div className="md:absolute inset-0 bg-black w-1/2"></div>
       <div className="hidden absolute inset-y-0 right-0 w-1/2 md:block">
         <Image src={hero} alt="Hero image" fill />
       </div>
 
-      <nav className="absolute inset-0 text-center text-white p-5 md:p-20  md:flex flex-col md:text-left  justify-center z-20 ">
+      <nav className="md:absolute inset-0 text-center text-white p-5 md:p-20  md:flex flex-col md:text-left  justify-center z-20 ">
         <h1 className=" font-semibold mb-2 opacity-90 md:text-7xl">
           Donald <br /> Mutua
         </h1>
