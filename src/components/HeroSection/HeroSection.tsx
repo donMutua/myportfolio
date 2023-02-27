@@ -1,6 +1,9 @@
 import Image from "next/image";
 import hero from "../../../public/images/hero3.png";
 
+const linkedInUrl = "https://www.linkedin.com/in/idrawdesigns/";
+const githubUrl = "https://github.com/donMutua";
+
 function HeroSection() {
   const cvUrl =
     "https://drive.google.com/file/d/1o8fickLZp6anwlFsmh2g0e_QvHu9hnak/view?usp=share_link";
@@ -22,7 +25,7 @@ function HeroSection() {
         </p>
         <div>
           <button
-            className="bg-white text-black p-3 hover:bg-slate-200 md:p-5"
+            className="bg-white text-black p-3 hover:bg-slate-200 md:p-5 cursor-pointer"
             onClick={() => window.open(cvUrl, "_blank")}
           >
             DOWNLOAD CV
@@ -30,9 +33,19 @@ function HeroSection() {
         </div>
 
         <div className="flex justify-center gap-5 mt-4 md:justify-start">
-          <p className="underline text-xs md:text-base">LinkedIn</p>{" "}
-          <span className="text-xs md:text-base">/</span>{" "}
-          <p className="underline text-xs md:text-base">Github</p>
+          <p
+            className="underline text-xs md:text-base cursor-pointer"
+            onClick={() => window.open(linkedInUrl, "_blank")}
+          >
+            LinkedIn
+          </p>{" "}
+          <span className="text-xs md:text-base cursor-pointer">/</span>{" "}
+          <p
+            className="underline text-xs md:text-base cursor-pointer"
+            onClick={() => window.open(githubUrl, "_blank")}
+          >
+            Github
+          </p>
         </div>
       </nav>
     </div>
