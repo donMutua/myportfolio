@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { sanitize } from "dompurify";
 
-import { API_URL, Project } from "@/lib/api";
+import { Project } from "@/lib/api";
 
 type CardComponentProps = {
   project: Project;
@@ -11,14 +11,12 @@ type CardComponentProps = {
 function CardComponent({ project }: CardComponentProps) {
   const { about, thumbnail, url, githubUrl, name } = project;
 
-  const image = thumbnail.data.attributes.url.toString();
-
-  const thumbnailUrl = `${API_URL}${image}`;
+  const image = thumbnail.data.attributes.url;
 
   return (
     <div className="flex flex-col justify-around mb-12 md:flex-row">
       <Image
-        src={thumbnailUrl}
+        src={image}
         width={400}
         height={400}
         alt="stock"

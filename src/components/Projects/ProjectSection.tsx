@@ -1,4 +1,4 @@
-import { Portfolio, PortfolioItem, Project } from "@/lib/api";
+import { Project } from "@/lib/api";
 import CardComponent from "../Card/CardComponent";
 
 function ProjectSection({ projects = [] }: { projects?: Project[] }) {
