@@ -8,11 +8,17 @@ import ProjectSection from "@/components/Projects/ProjectSection";
 import SkillsSection from "@/components/Skills/SkillsSection";
 
 import { PortfolioContext } from "@/store/PortfolioContext";
+import Loader from "@/components/Loader";
 
 function HomeScreen() {
   const { portfolio, isLoading } = useContext(PortfolioContext);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center  h-screen">
+        <Loader />
+      </div>
+    );
 
   const portfolioData = portfolio?.[0]?.attributes;
 
