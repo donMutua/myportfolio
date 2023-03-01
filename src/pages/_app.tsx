@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import * as gtag from "../utils/gtag";
-import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import "@/styles/globals.css";
+
+import * as gtag from "../utils/gtag";
 import { PortfolioProvider } from "@/store/PortfolioContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
