@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, ComponentType } from "react";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import "@/styles/globals.css";
@@ -18,9 +18,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  const PageComponent = Component as ComponentType<any>;
   return (
     <PortfolioProvider>
-      <Component {...pageProps} />
+      <PageComponent {...pageProps} />
     </PortfolioProvider>
   );
 }
