@@ -4,7 +4,7 @@ import hero from "../../../public/images/hero3.png";
 const linkedInUrl = "https://www.linkedin.com/in/idrawdesigns/";
 const githubUrl = "https://github.com/donMutua";
 const cvUrl =
-  "https://drive.google.com/file/d/1o8fickLZp6anwlFsmh2g0e_QvHu9hnak/view?usp=share_link";
+  "https://docs.google.com/document/d/1Rw0buZmIq-HAWkbB-TgDV_diz0xBc5NhWw9gxiXYnSI/edit?usp=sharing";
 
 function HeroSection() {
   return (
@@ -21,7 +21,7 @@ function HeroSection() {
 
         {/* <h3 className="text-2xl font-semibold mb-6">Front Developer</h3> */}
         <p className="text-sm font-regular opacity-80 mb-6 pr-6 md:text-base">
-          Front Developer | UI/UX Designer | Full Stack Developer
+          Senior Software Engineer | UI/UX Designer | CI/CD
         </p>
         <div>
           <button

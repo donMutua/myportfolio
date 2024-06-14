@@ -9,6 +9,7 @@ import SkillsSection from "@/components/Skills/SkillsSection";
 
 import { PortfolioContext } from "@/store/PortfolioContext";
 import Loader from "@/components/Loader";
+import Highlights from "@/components/highlights/Highlights";
 
 function HomeScreen() {
   const { portfolio, isLoading } = useContext(PortfolioContext);
@@ -22,13 +23,17 @@ function HomeScreen() {
 
   const portfolioData = portfolio?.[0]?.attributes;
 
-  const { about, skills, projects } = portfolioData || {};
+  const { aboutMe, skills, projects, highlights } = portfolioData || {};
+
+  const aboutMeContent = aboutMe?.content ?? undefined;
+  const highlightsContent = highlights?.content ?? undefined;
 
   return (
     <div className="bg-black">
       <NavBar />
       <HeroSection />
-      <AboutSection about={about} />
+      <AboutSection about={aboutMeContent} />
+      <Highlights highlights={highlightsContent} />
       <SkillsSection skills={skills} />
       <ProjectSection projects={projects} />
       <ContactMe />

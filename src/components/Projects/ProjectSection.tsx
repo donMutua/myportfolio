@@ -2,6 +2,7 @@ import { Project } from "@/lib/api";
 import CardComponent from "../Card/CardComponent";
 
 function ProjectSection({ projects = [] }: { projects?: Project[] }) {
+  console.log("projects", projects);
   return (
     <section id="projects" className="bg-yellow-100">
       <div className="p-5">

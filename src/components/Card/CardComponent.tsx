@@ -11,19 +11,22 @@ type CardComponentProps = {
 function CardComponent({ project }: CardComponentProps) {
   const { about, thumbnail, url, githubUrl, name } = project;
 
-  const image = thumbnail.data.attributes.url.toString();
+  const image = thumbnail?.data.attributes.url.toString();
 
   const thumbnailUrl = `${API_URL}${image}`;
 
+  console.log("thumbnailUrl", thumbnailUrl);
+
   return (
     <div className="flex flex-col justify-around mb-12 md:flex-row">
-      <Image
-        src={thumbnailUrl}
-        width={400}
-        height={400}
+      <img
+        src={thumbnailUrl || "/assets/stock.jpg"}
+        width="400"
+        height="400"
         alt="stock"
         className="rounded-lg mb-3"
         style={{ objectFit: "cover" }}
+        onError={(e) => console.error("Image failed to load", e)}
       />
 
       <div style={{ maxWidth: "550px" }}>

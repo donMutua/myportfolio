@@ -1,8 +1,17 @@
+import { type BlocksContent } from "@strapi/blocks-react-renderer";
+
 export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export interface PortfolioItem {
   attributes: {
-    about: string;
+    aboutMe: {
+      id?: number;
+      content: BlocksContent;
+    };
+    highlights: {
+      id?: number;
+      content: BlocksContent;
+    };
     projects: Project[];
     skills: Skill[];
   };
@@ -36,10 +45,12 @@ interface Thumbnail {
 export type Portfolio = PortfolioItem[];
 
 const url =
-  "api/portfolios?_limit=10&_start=0&_publicationState=preview&_locale=en&populate=projects.stackTags.techstack,projects.thumbnail,projects.stackTags.techstack,projects.techstack.icon,socialmedia.icon,skills";
+  "api/portfolios?_limit=10&_start=0&_publicationState=preview&_locale=en&populate=projects.stackTags.techstack,projects.thumbnail,projects.stackTags.techstack,projects.techstack.icon,socialmedia.icon,skills,aboutMe,highlights";
 
 export const getPortfolio = async (): Promise<Portfolio> => {
   const response = await fetch(`${API_URL}/${url}`);
   const data = await response.json();
+
+  console.log("data", data);
   return data.data;
 };
