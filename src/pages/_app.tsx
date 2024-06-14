@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NextPage } from "next";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import "@/styles/globals.css";
@@ -8,6 +9,7 @@ import { PortfolioProvider } from "@/store/PortfolioContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const NextComponent = Component as NextPage;
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -20,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
   return (
     <PortfolioProvider>
-      <Component {...pageProps} />
+      <NextComponent {...pageProps} />
     </PortfolioProvider>
   );
 }
