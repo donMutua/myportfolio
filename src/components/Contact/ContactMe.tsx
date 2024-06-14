@@ -8,7 +8,7 @@ function ContactMe() {
     <section id="contact" className=" text-white pt-5">
       <div className="p-5 md:w-2/4 md:p-0 t m-auto">
         <h1 className="font-semibold text-2xl mb-2 text-center">
-          Let's Create Something Great Together! - Hire Me
+          Let&apos;s Create Something Great Together! - Hire Me
         </h1>
         <div className=" mb-10 text-center">
           <Image
