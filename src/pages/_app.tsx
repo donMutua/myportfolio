@@ -9,7 +9,6 @@ import { PortfolioProvider } from "../store/PortfolioContext";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();
-  const PageComponent = Component as NextPage;
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -23,9 +22,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <PortfolioProvider>
-      <PageComponent {...pageProps} />
+      <Component {...pageProps} />
     </PortfolioProvider>
   );
 };
-
 export default MyApp;
