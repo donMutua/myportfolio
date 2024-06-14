@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 import * as gtag from "../utils/gtag";
 import { PortfolioProvider } from "../store/PortfolioContext";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -25,6 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <PageComponent {...pageProps} />
     </PortfolioProvider>
   );
-}
+};
 
 export default MyApp;
