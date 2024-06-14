@@ -8,8 +8,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "airbnb",
-    "airbnb/hooks"
+    "airbnb"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,8 +16,7 @@
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
@@ -34,8 +32,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-curly-brace-presence": "off",
-    "react/jsx-fragments": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "react/jsx-fragments": "off"
   },
   "settings": {
     "import/resolver": {
