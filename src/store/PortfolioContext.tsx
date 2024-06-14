@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useEffect, useState } from "react";
-import { getPortfolio, Portfolio } from "@/lib/api";
+import { getPortfolio, Portfolio } from "../lib/api";
 
 interface PortfolioContextProps {
   portfolio: Portfolio | null;
