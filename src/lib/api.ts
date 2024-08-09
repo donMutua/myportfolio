@@ -51,6 +51,5 @@ export const getPortfolio = async (): Promise<Portfolio> => {
   const response = await fetch(`${API_URL}/${url}`);
   const data = await response.json();
 
-  console.log("data", data);
   return data.data;
 };

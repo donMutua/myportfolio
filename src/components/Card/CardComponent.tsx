@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+
 import { sanitize } from "dompurify";
 
 import { API_URL, Project } from "@/lib/api";
@@ -13,7 +13,7 @@ function CardComponent({ project }: CardComponentProps) {
 
   const image = thumbnail?.data.attributes.url.toString();
 
-  const thumbnailUrl = `${API_URL}${image}`;
+  const thumbnailUrl = `${API_URL}${image ?? ""}`;
 
   console.log("thumbnailUrl", thumbnailUrl);
 
