@@ -15,8 +15,6 @@ function CardComponent({ project }: CardComponentProps) {
 
   const thumbnailUrl = `${API_URL}${image ?? ""}`;
 
-  console.log("thumbnailUrl", thumbnailUrl);
-
   return (
     <div className="flex flex-col justify-around mb-12 md:flex-row">
       <img
