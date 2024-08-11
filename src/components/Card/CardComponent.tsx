@@ -24,7 +24,6 @@ function CardComponent({ project }: CardComponentProps) {
         alt="stock"
         className="rounded-lg mb-3"
         style={{ objectFit: "cover" }}
-        onError={(e) => console.error("Image failed to load", e)}
       />
 
       <div style={{ maxWidth: "550px" }}>

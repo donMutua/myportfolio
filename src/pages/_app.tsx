@@ -1,5 +1,4 @@
-import React, { useEffect, ComponentType } from "react";
-import { NextPage } from "next";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import "@/styles/globals.css";
