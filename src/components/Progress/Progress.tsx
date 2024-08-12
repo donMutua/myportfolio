@@ -15,7 +15,7 @@ function ProgressComponent({ skill }: SkillProps) {
 
   return (
     <div className="flex flex-col md:items-center md:space-x-4 m-auto md:flex-row ">
-      <p>Progress</p>
+      <p>{skillPercentage}</p>
     </div>
   );
 }
