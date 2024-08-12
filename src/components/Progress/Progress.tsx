@@ -9,13 +9,15 @@ type SkillProps = {
 };
 
 function ProgressComponent({ skill }: SkillProps) {
+  const skillPercentage = skill ? skill.skill * 100 : 0;
+
   return (
     <div className="flex flex-col md:items-center md:space-x-4 m-auto md:flex-row ">
       <span>{skill?.language}:</span>
       <Progress.Root className="h-4 w-80 bg-gray-200 rounded-full" max={100}>
         <Progress.Indicator
           className="h-4 bg-black rounded-full"
-          style={{ transform: `${Number(skill ? skill.skill * 100 : 0)}%` }}
+          style={{ width: `${Number(skillPercentage)}%` }}
         />
       </Progress.Root>
     </div>
@@ -23,5 +25,3 @@ function ProgressComponent({ skill }: SkillProps) {
 }
 
 export default ProgressComponent;
-
-// style={{ transform: `translateX(-${100 - progress}%)` }}
