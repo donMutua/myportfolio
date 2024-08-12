@@ -1,5 +1,5 @@
 import React from "react";
-import * as Progress from "@radix-ui/react-progress";
+import { Progress } from "antd";
 
 type SkillProps = {
   skill: {
@@ -21,9 +21,13 @@ function ProgressComponent({ skill }: SkillProps) {
   return (
     <div className="flex flex-col md:items-center md:space-x-4 m-auto md:flex-row ">
       <span>{skill?.language}:</span>
-      <Progress.Root className="h-4 w-80 bg-gray-200 rounded-full" max={max}>
-        <Progress.Indicator style={{ width: `${Number(skillPercentage)}%` }} />
-      </Progress.Root>
+      <Progress
+        className="h-4 w-80  rounded-full"
+        percent={skillPercentage}
+        size={{ height: 15 }}
+        strokeColor="#000"
+        showInfo={false}
+      ></Progress>
     </div>
   );
 }
