@@ -10,11 +10,18 @@ type SkillProps = {
 
 function ProgressComponent({ skill }: SkillProps) {
   const skillPercentage = skill ? skill.skill * 100 : 0;
+  const max = 100;
+
+  if (max <= 0) {
+    console.error(
+      `The max value for the progress bar must be greater than 0. The current value is ${max}.`
+    );
+  }
 
   return (
     <div className="flex flex-col md:items-center md:space-x-4 m-auto md:flex-row ">
       <span>{skill?.language}:</span>
-      <Progress.Root className="h-4 w-80 bg-gray-200 rounded-full" max={100}>
+      <Progress.Root className="h-4 w-80 bg-gray-200 rounded-full" max={max}>
         <Progress.Indicator style={{ width: `${Number(skillPercentage)}%` }} />
       </Progress.Root>
     </div>
