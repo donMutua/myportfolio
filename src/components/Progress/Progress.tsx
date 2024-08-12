@@ -9,7 +9,7 @@ type SkillProps = {
 };
 
 function ProgressComponent({ skill }: SkillProps) {
-  const skillPercentage = skill && skill?.skill * 100;
+  const skillPercentage = skill ? skill.skill * 100 : 0;
 
   console.log(typeof skillPercentage, skillPercentage);
 
