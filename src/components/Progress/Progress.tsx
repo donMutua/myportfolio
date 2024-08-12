@@ -17,8 +17,8 @@ function ProgressComponent({ skill }: SkillProps) {
       <Progress.Root className="h-4 w-80 bg-gray-200 rounded-full" max={100}>
         <Progress.Indicator
           className="h-4 bg-black rounded-full"
-          style={{ width: `${Number(50)}%` }}
-        />
+          style={{ width: `${Number(skillPercentage)}%` }}
+        ></Progress.Indicator>
       </Progress.Root>
     </div>
   );
